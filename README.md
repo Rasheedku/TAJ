@@ -57,6 +57,7 @@ If **Taj.BuildingCostApp.Packaging** shows in Solution Explorer but is missing f
    - **Active solution configuration** = `Debug`
    - **Active solution platform** = `x64`
    - The **Taj.BuildingCostApp.Packaging** row has **Build** and **Deploy** checked
+4. If you still see a warning about unknown project configuration mappings, close Visual Studio and delete the local `.vs` folder next to `TAJ.sln`, then re-open the solution.
 
 If the packaging project still does not appear in **Startup Project** options, re-add it to the solution:
 1. Right-click **Solution 'TAJ'** → **Add → Existing Project...**
