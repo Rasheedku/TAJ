@@ -15,6 +15,36 @@ TAJ is a packaged-only WinUI 3 desktop application (Windows App SDK on .NET 8) f
 2. Set **Taj.BuildingCostApp.Packaging** as the Startup Project.
 3. Select **Debug | x64** and run.
 
+## Troubleshooting: Clone shows only `.git` / `.gitkeep`
+If you cloned the repo and the folder is empty (only `.git` or `.gitkeep`), use these steps:
+1. Start clean:
+   ```bash
+   cd "C:\"
+   rmdir /s /q "Taj App"
+   mkdir "Taj App"
+   cd "Taj App"
+   ```
+2. Clone the main branch explicitly:
+   ```bash
+   git clone --branch main https://github.com/Rasheedku/Taj/ .
+   ```
+3. Verify files exist:
+   ```bash
+   dir
+   ```
+   You should see `TAJ.sln`, `README.md`, and `src\`.
+
+If you still see an empty folder, run:
+```bash
+git remote -v
+git branch -a
+```
+Then check out the default branch (for example `main`):
+```bash
+git checkout -b main origin/main
+```
+If the output of `git branch -a` shows a different default branch, replace `main` accordingly.
+
 ## Seeded Admin Credentials
 If `users.json` is missing, the app seeds:
 - **Username:** `admin`
@@ -33,4 +63,3 @@ Default seeds are packaged under `src/Taj.BuildingCostApp/Data/` and copied to l
 
 ## Pricing & Settings
 Admin users can manage prices and constants from **Admin → Pricing**. Changes persist to `prices.json`.
-
