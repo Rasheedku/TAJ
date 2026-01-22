@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "foundations": {
+    "packedBlockPerM2": 120,
+    "precastPerM2": 150,
+    "concreteSlabPerM2": 200
+  },
+  "glass": {
+    "singlePerM2": 300,
+    "doublePerM2": 450,
+    "curvedPerM2": 650
+  },
+  "skids": {
+    "ceramicPerM2": 70,
+    "parquetPerM2": 110,
+    "pvcPerM2": 55
+  },
+  "walls": {
+    "exteriorPaintPerM2": 40,
+    "exteriorAluminumPerM2": 140,
+    "wetAreaPerM2": 120,
+    "partitionPerM2": 80
+  },
+  "roof": {
+    "roofPerM2": 95,
+    "parapetPerM2": 130
+  },
+  "ceilings": {
+    "ceiling6060PerM2": 35,
+    "gypsumWithLightingPerM2": 120
+  },
+  "externalFlooring": {
+    "ceramicPerM2": 65,
+    "wpcPerM2": 110
+  },
+  "electrical": {
+    "electricalPerM2": 90
+  },
+  "pantry": {
+    "aluminumPerLm": 420,
+    "woodPerLm": 520
+  },
+  "doors": {
+    "doorTypes": [
+      { "name": "90x210", "price": 650 },
+      { "name": "100x210", "price": 720 }
+    ]
+  },
+  "delivery": {
+    "rates": [
+      { "emirate": "Abu Dhabi", "perSkidCost": 180 },
+      { "emirate": "Dubai", "perSkidCost": 220 },
+      { "emirate": "Sharjah", "perSkidCost": 200 },
+      { "emirate": "Ajman", "perSkidCost": 190 },
+      { "emirate": "Umm Al Quwain", "perSkidCost": 210 },
+      { "emirate": "Ras Al Khaimah", "perSkidCost": 230 },
+      { "emirate": "Fujairah", "perSkidCost": 240 },
+      { "emirate": "Al Ain", "perSkidCost": 200 }
+    ]
+  }
+}

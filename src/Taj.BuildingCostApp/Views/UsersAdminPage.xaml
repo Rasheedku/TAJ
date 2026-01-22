@@ -1,0 +1,42 @@
+<Page
+    x:Class="Taj.BuildingCostApp.Views.UsersAdminPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Taj.BuildingCostApp.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:UsersAdminViewModel />
+    </Page.DataContext>
+
+    <ScrollViewer>
+        <StackPanel Padding="24" Spacing="16">
+            <TextBlock Text="Users Admin" FontSize="22" FontWeight="SemiBold" />
+            <TextBlock Text="{Binding StatusMessage}" Foreground="ForestGreen" />
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <TextBox Header="Username" Text="{Binding NewUsername, Mode=TwoWay}" Width="180" />
+                <PasswordBox x:Name="NewPasswordBox" Header="Password" PasswordChanged="OnPasswordChanged" Width="180" />
+                <ComboBox Header="Role" ItemsSource="{Binding Roles}" SelectedItem="{Binding NewRole, Mode=TwoWay}" Width="140" />
+                <Button Content="Create" Command="{Binding CreateUserCommand}" />
+            </StackPanel>
+
+            <ItemsControl ItemsSource="{Binding Users}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="models:UserRecord" xmlns:models="using:Taj.BuildingCostApp.Models">
+                        <Border Padding="12" CornerRadius="6" Margin="0,0,0,8" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <TextBlock Text="{x:Bind Username}" Width="160" />
+                                <TextBlock Text="{x:Bind Role}" Width="120" />
+                                <TextBlock Text="{x:Bind IsActive}" Width="80" />
+                                <Button Content="Toggle Active" Command="{Binding DataContext.ToggleActiveCommand, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding}" />
+                                <Button Content="Change Password" Command="{Binding DataContext.ChangePasswordCommand, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

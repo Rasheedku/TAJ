@@ -1,0 +1,35 @@
+# Build outputs
+**/bin/
+**/obj/
+**/*.user
+**/*.userosscache
+**/*.suo
+**/*.cache
+**/*.assets.cache
+
+# Visual Studio
+.vs/
+.vscode/
+.idea/
+*.sln.iml
+
+# NuGet
+**/packages/
+**/project.lock.json
+**/project.assets.json
+
+# MSIX/Appx packaging
+**/AppPackages/
+**/BundleArtifacts/
+**/Packages/
+**/*.appx
+**/*.msix
+**/*.msixbundle
+**/*.appxbundle
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

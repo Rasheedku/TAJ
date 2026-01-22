@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="LoginTitle.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginUsername.Header" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="LoginPassword.Header" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LoginButton.Content" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="HomeWelcome.Text" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+</root>

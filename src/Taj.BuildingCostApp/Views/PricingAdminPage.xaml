@@ -1,0 +1,134 @@
+<Page
+    x:Class="Taj.BuildingCostApp.Views.PricingAdminPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Taj.BuildingCostApp.ViewModels"
+    xmlns:models="using:Taj.BuildingCostApp.Models"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:PricingAdminViewModel />
+    </Page.DataContext>
+
+    <ScrollViewer>
+        <StackPanel Padding="24" Spacing="16">
+            <TextBlock Text="Pricing Admin" FontSize="22" FontWeight="SemiBold" />
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Foundations" FontWeight="SemiBold" />
+                    <NumberBox Header="Packed Block / m²" Value="{Binding Prices.Foundations.PackedBlockPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Precast / m²" Value="{Binding Prices.Foundations.PrecastPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Concrete Slab / m²" Value="{Binding Prices.Foundations.ConcreteSlabPerM2, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Glass" FontWeight="SemiBold" />
+                    <NumberBox Header="Single / m²" Value="{Binding Prices.Glass.SinglePerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Double / m²" Value="{Binding Prices.Glass.DoublePerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Curved / m²" Value="{Binding Prices.Glass.CurvedPerM2, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Skids" FontWeight="SemiBold" />
+                    <NumberBox Header="Ceramic / m²" Value="{Binding Prices.Skids.CeramicPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Parquet / m²" Value="{Binding Prices.Skids.ParquetPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="PVC / m²" Value="{Binding Prices.Skids.PvcPerM2, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Walls" FontWeight="SemiBold" />
+                    <NumberBox Header="Exterior Paint / m²" Value="{Binding Prices.Walls.ExteriorPaintPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Exterior Aluminum / m²" Value="{Binding Prices.Walls.ExteriorAluminumPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Wet Area / m²" Value="{Binding Prices.Walls.WetAreaPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Partitions / m²" Value="{Binding Prices.Walls.PartitionPerM2, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Roof" FontWeight="SemiBold" />
+                    <NumberBox Header="Roof / m²" Value="{Binding Prices.Roof.RoofPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Parapet / m²" Value="{Binding Prices.Roof.ParapetPerM2, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Ceilings" FontWeight="SemiBold" />
+                    <NumberBox Header="60x60 / m²" Value="{Binding Prices.Ceilings.Ceiling6060PerM2, Mode=TwoWay}" />
+                    <NumberBox Header="Gypsum + Lighting / m²" Value="{Binding Prices.Ceilings.GypsumWithLightingPerM2, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="External Flooring" FontWeight="SemiBold" />
+                    <NumberBox Header="Ceramic / m²" Value="{Binding Prices.ExternalFlooring.CeramicPerM2, Mode=TwoWay}" />
+                    <NumberBox Header="WPC / m²" Value="{Binding Prices.ExternalFlooring.WpcPerM2, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Electrical" FontWeight="SemiBold" />
+                    <NumberBox Header="Electrical / m²" Value="{Binding Prices.Electrical.ElectricalPerM2, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Pantry" FontWeight="SemiBold" />
+                    <NumberBox Header="Aluminum / lm" Value="{Binding Prices.Pantry.AluminumPerLm, Mode=TwoWay}" />
+                    <NumberBox Header="Wood / lm" Value="{Binding Prices.Pantry.WoodPerLm, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Door Types" FontWeight="SemiBold" />
+                    <ItemsControl ItemsSource="{Binding DoorTypes}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="models:DoorTypePrice">
+                                <StackPanel Orientation="Horizontal" Spacing="12">
+                                    <TextBox Text="{x:Bind Name, Mode=TwoWay}" Width="160" />
+                                    <NumberBox Value="{x:Bind Price, Mode=TwoWay}" Width="140" />
+                                    <Button Content="Remove" Command="{Binding DataContext.RemoveDoorTypeCommand, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <Button Content="Add Door Type" Command="{Binding AddDoorTypeCommand}" />
+                </StackPanel>
+            </Border>
+
+            <Border Padding="12" CornerRadius="6" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Delivery Rates" FontWeight="SemiBold" />
+                    <ItemsControl ItemsSource="{Binding DeliveryRates}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="models:DeliveryRate">
+                                <StackPanel Orientation="Horizontal" Spacing="12">
+                                    <TextBox Text="{x:Bind Emirate, Mode=TwoWay}" Width="200" />
+                                    <NumberBox Value="{x:Bind PerSkidCost, Mode=TwoWay}" Width="140" />
+                                    <Button Content="Remove" Command="{Binding DataContext.RemoveDeliveryRateCommand, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <Button Content="Add Delivery Rate" Command="{Binding AddDeliveryRateCommand}" />
+                </StackPanel>
+            </Border>
+
+            <Button Content="Save Pricing" Command="{Binding SaveCommand}" Width="160" />
+        </StackPanel>
+    </ScrollViewer>
+</Page>

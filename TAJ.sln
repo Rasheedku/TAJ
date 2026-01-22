@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taj.BuildingCostApp", "src/Taj.BuildingCostApp/Taj.BuildingCostApp.csproj", "{C0E1B277-0B6C-47A8-9A2B-8B4E6C1E1A55}"
+EndProject
+Project("{C7167F0A-BCB5-4B35-9DF2-3D7A3B1C4E5B}") = "Taj.BuildingCostApp.Packaging", "src/Taj.BuildingCostApp.Packaging/Taj.BuildingCostApp.Packaging.wapproj", "{C479A24C-7F61-4C94-A90F-3E0DF736C8D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0E1B277-0B6C-47A8-9A2B-8B4E6C1E1A55}.Debug|x64.ActiveCfg = Debug|x64
+		{C0E1B277-0B6C-47A8-9A2B-8B4E6C1E1A55}.Debug|x64.Build.0 = Debug|x64
+		{C0E1B277-0B6C-47A8-9A2B-8B4E6C1E1A55}.Release|x64.ActiveCfg = Release|x64
+		{C0E1B277-0B6C-47A8-9A2B-8B4E6C1E1A55}.Release|x64.Build.0 = Release|x64
+		{C479A24C-7F61-4C94-A90F-3E0DF736C8D8}.Debug|x64.ActiveCfg = Debug|x64
+		{C479A24C-7F61-4C94-A90F-3E0DF736C8D8}.Debug|x64.Build.0 = Debug|x64
+		{C479A24C-7F61-4C94-A90F-3E0DF736C8D8}.Release|x64.ActiveCfg = Release|x64
+		{C479A24C-7F61-4C94-A90F-3E0DF736C8D8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+EndGlobal
