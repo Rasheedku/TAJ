@@ -4,7 +4,7 @@ TAJ is a packaged-only WinUI 3 desktop application (Windows App SDK on .NET 8) f
 
 ## Prerequisites
 - Windows 10/11
-- Visual Studio 2022 with:
+- Visual Studio 2022 (17.8+) or newer (including Visual Studio 2026 Preview) with:
   - .NET Desktop Development
   - Universal Windows Platform development
   - Windows App SDK tooling
