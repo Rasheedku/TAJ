@@ -45,6 +45,23 @@ git checkout -b main origin/main
 ```
 If the output of `git branch -a` shows a different default branch, replace `main` accordingly.
 
+## Troubleshooting: Packaging project not selectable as Startup
+If **Taj.BuildingCostApp.Packaging** shows in Solution Explorer but is missing from **Startup Project** options:
+1. Close Visual Studio.
+2. Make sure your local solution is up to date:
+   ```bash
+   cd "C:\Taj App"
+   git pull
+   ```
+3. Re-open `TAJ.sln`, then use **Build → Configuration Manager** and ensure:
+   - **Active solution configuration** = `Debug`
+   - **Active solution platform** = `x64`
+   - The **Taj.BuildingCostApp.Packaging** row has **Build** and **Deploy** checked
+
+If the packaging project still does not appear in **Startup Project** options, re-add it to the solution:
+1. Right-click **Solution 'TAJ'** → **Add → Existing Project...**
+2. Select `src\Taj.BuildingCostApp.Packaging\Taj.BuildingCostApp.Packaging.wapproj`.
+
 ## Seeded Admin Credentials
 If `users.json` is missing, the app seeds:
 - **Username:** `admin`
