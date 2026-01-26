@@ -1,0 +1,30 @@
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{C479A24C-7F61-4C94-A90F-3E0DF736C8D8}</ProjectGuid>
+    <TargetPlatformVersion>10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+    <AppxManifest>Package.appxmanifest</AppxManifest>
+    <DefaultLanguage>en-us</DefaultLanguage>
+    <OutputType>AppContainerExe</OutputType>
+    <RootNamespace>Taj.BuildingCostApp.Packaging</RootNamespace>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\StoreLogo.svg" />
+    <Content Include="Assets\Square150x150Logo.svg" />
+    <Content Include="Assets\Square44x44Logo.svg" />
+    <Content Include="Assets\Wide310x150Logo.svg" />
+    <Content Include="Package.appxmanifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Taj.BuildingCostApp\Taj.BuildingCostApp.csproj" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\DesktopBridge\Microsoft.DesktopBridge.props" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\DesktopBridge\Microsoft.DesktopBridge.targets" />
+</Project>

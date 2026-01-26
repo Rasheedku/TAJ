@@ -1,0 +1,17 @@
+<Page
+    x:Class="Taj.BuildingCostApp.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Padding="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Uid="HomeWelcome" Text="Welcome" FontSize="22" FontWeight="SemiBold" />
+        <UniformGrid Grid.Row="1" Columns="3" Rows="1" Margin="0,24,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button Content="Quotation Generator" Click="OnQuotationClick" Margin="8" Height="180" />
+            <Button Content="Invoice Generator" Click="OnInvoiceClick" Margin="8" Height="180" />
+            <Button Content="Project Cost Calculator" Click="OnCalculatorClick" Margin="8" Height="180" />
+        </UniformGrid>
+    </Grid>
+</Page>
